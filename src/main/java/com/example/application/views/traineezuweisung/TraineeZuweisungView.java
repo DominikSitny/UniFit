@@ -12,6 +12,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Menu;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.flow.spring.data.VaadinSpringDataHelpers;
 import jakarta.annotation.security.RolesAllowed;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,8 @@ import org.vaadin.lineawesome.LineAwesomeIconUrl;
 @PageTitle("Trainee-Zuweisung")
 @Route("")
 @Menu(order = 1, icon = LineAwesomeIconUrl.PENCIL_RULER_SOLID)
-@RolesAllowed("ADMIN")
+//@RolesAllowed("ADMIN")
+@AnonymousAllowed
 @Uses(Icon.class)
 public class TraineeZuweisungView extends Composite<VerticalLayout> {
 
